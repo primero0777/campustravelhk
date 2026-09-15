@@ -144,7 +144,7 @@
         `Destination visée : ${destination}\n\n` +
         `Message :\n${message}`;
 
-      const mailtoUrl = `mailto:campustravel31@gmail.com?subject=${encodeURIComponent(
+      const mailtoUrl = `mailto:contact@campustravelhk.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
@@ -152,7 +152,7 @@
 
       if (formNote) {
         formNote.textContent =
-          "Votre client mail devrait s'ouvrir avec votre demande pré-remplie. Vous pouvez aussi nous écrire directement à campustravel31@gmail.com.";
+          "Votre client mail devrait s'ouvrir avec votre demande pré-remplie. Vous pouvez aussi nous écrire directement à contact@campustravelhk.com.";
       }
     });
   }
