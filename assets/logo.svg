@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Campus Travel H&amp;K — emblème</title>
+  <circle cx="60" cy="60" r="52" stroke="#1B3D8F" stroke-width="4"/>
+  <path d="M60 30 L84 42 L60 54 L36 42 Z" fill="#1B3D8F"/>
+  <path d="M42 46 V58 C42 63 50 67 60 67 C70 67 78 63 78 58 V46" stroke="#1B3D8F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M84 42 V52" stroke="#1B3D8F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 78 C36 70 84 70 98 78 L90 84 C78 80 42 80 30 84 Z" fill="#E8291F"/>
+  <path d="M60 78 L66 68 L72 68 L68 78 Z" fill="#E8291F"/>
+  <path d="M60 78 L66 88 L72 88 L68 78 Z" fill="#E8291F"/>
+</svg>

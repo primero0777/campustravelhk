@@ -1,0 +1,159 @@
+(() => {
+  "use strict";
+
+  /* ---------- Année dans le footer ---------- */
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- Menu mobile (dropdown) ---------- */
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  if (navToggle && mainNav) {
+    const closeNav = () => {
+      mainNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+
+    navToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const open = mainNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
+
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeNav);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (mainNav.classList.contains("open") && !mainNav.contains(event.target)) {
+        closeNav();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeNav();
+    });
+  }
+
+  /* ---------- Reveal au scroll ---------- */
+  const revealEls = document.querySelectorAll("[data-reveal]");
+  if ("IntersectionObserver" in window && revealEls.length) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    );
+    revealEls.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("in-view"));
+  }
+
+  /* ---------- Compteurs animés (stats "Pourquoi nous") ---------- */
+  const statNumbers = document.querySelectorAll(".stat-number");
+  if (statNumbers.length && "IntersectionObserver" in window) {
+    const duration = 1600;
+
+    const animateCount = (el) => {
+      const target = parseInt(el.dataset.target, 10) || 0;
+      const suffix = el.dataset.suffix || "";
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+
+    const statObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            statObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    statNumbers.forEach((el) => statObserver.observe(el));
+  }
+
+  /* ---------- Accordéon FAQ ---------- */
+  document.querySelectorAll(".acc-item").forEach((item) => {
+    const trigger = item.querySelector(".acc-trigger");
+    if (!trigger) return;
+    trigger.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      document.querySelectorAll(".acc-item.open").forEach((openItem) => {
+        if (openItem !== item) {
+          openItem.classList.remove("open");
+          openItem.querySelector(".acc-trigger").setAttribute("aria-expanded", "false");
+        }
+      });
+
+      item.classList.toggle("open", !isOpen);
+      trigger.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
+
+  /* ---------- Header : transparent en haut, plein au scroll ---------- */
+  const header = document.getElementById("siteHeader");
+  if (header) {
+    const onScroll = () => {
+      header.classList.toggle("scrolled", window.scrollY > 24);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- Formulaire de contact (mailto de secours) ---------- */
+  const form = document.getElementById("contactForm");
+  const formNote = document.getElementById("formNote");
+
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const data = new FormData(form);
+      const name = data.get("name");
+      const email = data.get("email");
+      const phone = data.get("phone");
+      const destination = data.get("destination");
+      const message = data.get("message");
+
+      const subject = `Demande de renseignements : ${destination}`;
+      const body =
+        `Nom : ${name}\n` +
+        `Email : ${email}\n` +
+        `Téléphone : ${phone}\n` +
+        `Destination visée : ${destination}\n\n` +
+        `Message :\n${message}`;
+
+      const mailtoUrl = `mailto:campustravel31@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoUrl;
+
+      if (formNote) {
+        formNote.textContent =
+          "Votre client mail devrait s'ouvrir avec votre demande pré-remplie. Vous pouvez aussi nous écrire directement à campustravel31@gmail.com.";
+      }
+    });
+  }
+})();
