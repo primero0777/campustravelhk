@@ -1,12 +1,52 @@
-Photos utilisées sur le site : toutes sous licence Unsplash (gratuites, usage commercial autorisé, aucune attribution obligatoire). Crédits listés ici à titre de bonne pratique et de traçabilité pour le client.
+Photos utilisées sur le site : sauf mention contraire, sous licence Unsplash (gratuites, usage
+commercial autorisé, aucune attribution obligatoire). Crédits listés ici à titre de bonne pratique
+et de traçabilité pour le client.
 
 hero-travel.jpg     : Tableau des départs aéroport : photographe : JESHOOTS.COM : unsplash.com
-about-team.jpg      : Groupe d'étudiants autour d'un ordinateur : photographe : Vitaly Gariev : unsplash.com
-dest-france.jpg     : Tour Eiffel / Paris : photographe : Miraxh Tereziu : unsplash.com
 dest-espagne.jpg    : Palais Royal / Madrid : photographe : Wojciech Portnicki : unsplash.com
 dest-irlande.jpg    : Ha'penny Bridge / Dublin : photographe : Sophie Popplewell : unsplash.com
 dest-canada.jpg     : Skyline / Montréal : photographe : Nathalia Segato : unsplash.com
 dest-belgique.jpg   : Tour de l'Hôtel de Ville / Bruxelles : photographe : Tobias Rademacher : unsplash.com
 dest-suisse.jpg     : Lac Léman et jet d'eau / Genève : photographe : Ryan Klaus : unsplash.com
+
+Logo (assets/logo.png, assets/favicon.png) : le vrai logo de l'agence, fourni le 2026-09-17
+("LOGO CAMPUS TRAVEL H&K.png" et "-V2 favicon.png"), recadré serré sur l'emblème (chapeau + globe +
+avion) pour l'usage en petit format dans l'en-tête/pied de page. Remplace l'ancienne reconstitution
+approximative (assets/logo.svg, assets/favicon.svg, supprimés).
+
+Photos neutres générées par IA, fournies par l'agence le 2026-09-17 (fichiers "Image_fx(...).jpg",
+sans texte ni logo incrusté) :
+success-graduate-eiffel.jpg : Jeune diplômée souriante, tour Eiffel en arrière-plan (photo d'illustration générée par IA, pas une vraie cliente)
+about-campus.jpg             : Étudiante souriante traversant un campus, sac à dos sur l'épaule
+dest-france.jpg               : Voyageuse avec valise, tour Eiffel en arrière-plan
+apropos-vision.jpg             : Voyageuse avec passeport et valise, tour Eiffel en arrière-plan
+apropos-temoignage.jpg          : Jeune voyageuse joyeuse, passeport en main, tour Eiffel en arrière-plan
+contact-energie.jpg              : Jeune femme joyeuse, portrait studio (photo d'illustration générée par IA)
+
+Ces photos étant générées par IA (aucune personne réelle), elles ne posent pas le même risque de
+représentation trompeuse qu'une vraie photo de tiers utilisée sans autorisation ; elles restent
+néanmoins des placeholders à remplacer par de vraies photos de clients ou de l'équipe dès que
+possible (voir README.md).
+
+Bannière promotionnelle fournie par l'agence (fichier "brochure.png" fourni le 2026-09-16,
+reconverti en JPEG pour réduire son poids) :
+brochure.jpg : Bannière "Concrétiser votre rêve d'étude à l'étranger" avec logo et coordonnées
+
+Visuels de réseaux sociaux fournis par l'agence (fichiers "Campus Travel MARS/AVRIL/Post...",
+fournis le 2026-09-16, redimensionnés en 600x600 pour le web) :
+social-visa-avi.jpg        : "Obtiens ton AVI en moins de 48h" : réalisez votre projet d'études à l'étranger
+social-logement.jpg        : "Besoin d'un logement étudiant à l'étranger ?"
+social-etudier-europe.jpg  : "Étudier en Europe commence par les bonnes démarches"
+social-motivation-lundi.jpg: "Hello Lundi : nouvelle semaine, nouveaux objectifs" (post d'engagement, sans lien direct avec une destination ou un service)
+
+Ces 4 visuels affichent encore l'ancienne adresse campustravel31@gmail.com en incrustation (texte
+fixé dans l'image, non modifiable depuis le site) : à régénérer dans l'outil de conception d'origine
+(Canva ou autre) si l'agence veut les mettre à jour avec contact@campustravelhk.com avant de les
+repartager sur les réseaux sociaux.
+
+Affiche "Procédure Campus France" (fournie le 2026-09-17, fichier "kakemono externe.png", version
+mise à jour avec le bon email et le vrai logo — remplace l'ancienne version du 2026-09-16) :
+social-campus-france.jpg  : recadrage carré, utilisé dans la galerie réseaux sociaux d'index.html
+promo-campus-france.jpg   : version large, utilisée en bannière sur destinations.html
 
 À remplacer si le client fournit ses propres photos (locaux, équipe, événements) : voir README.md.

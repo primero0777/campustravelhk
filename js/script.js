@@ -156,4 +156,57 @@
       }
     });
   }
+
+  /* ---------- Lightbox galerie réseaux sociaux ---------- */
+  const socialPosts = Array.from(document.querySelectorAll(".social-post"));
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+  const lightboxPrev = document.getElementById("lightboxPrev");
+  const lightboxNext = document.getElementById("lightboxNext");
+
+  if (socialPosts.length && lightbox && lightboxImg) {
+    let currentIndex = 0;
+    let lastFocused = null;
+
+    const showAt = (index) => {
+      currentIndex = (index + socialPosts.length) % socialPosts.length;
+      const img = socialPosts[currentIndex].querySelector("img");
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    };
+
+    const openLightbox = (index) => {
+      lastFocused = document.activeElement;
+      showAt(index);
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      lightboxClose.focus();
+    };
+
+    const closeLightbox = () => {
+      lightbox.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
+    };
+
+    socialPosts.forEach((btn, index) => {
+      btn.addEventListener("click", () => openLightbox(index));
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", () => showAt(currentIndex - 1));
+    lightboxNext.addEventListener("click", () => showAt(currentIndex + 1));
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (lightbox.hidden) return;
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowLeft") showAt(currentIndex - 1);
+      if (event.key === "ArrowRight") showAt(currentIndex + 1);
+    });
+  }
 })();

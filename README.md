@@ -26,6 +26,13 @@ assets/photos/           # photos libres de droits (Unsplash) utilisées sur le 
 Icônes : [Font Awesome Free](https://fontawesome.com) 6.5.1 via CDN (cdnjs). Seule dépendance externe
 avec Google Fonts : le site reste déployable tel quel sur un hébergement mutualisé.
 
+Deux blocs CSS réutilisables (`.page-intro` et `.highlight-block` dans `css/style.css`) servent à
+associer texte + photo sur plusieurs pages (`services.html`, `destinations.html`, `tarifs.html`,
+`faq.html`) sans dupliquer de styles page par page. Les visuels de posts réseaux sociaux fournis
+par l'agence sont utilisés à deux endroits : en galerie complète (avec visionneuse au clic) sur
+`index.html`, et individuellement en illustration sur la page dont le sujet correspond (visa sur
+`faq.html`, logement sur `services.html`, Campus France sur `destinations.html`).
+
 Chaque page interne réutilise le même header/footer/bouton WhatsApp (dupliqués par fichier, comme
 c'est la norme sur un site statique multi-pages sans moteur de template) mais le **contenu** n'est
 rédigé qu'à un seul endroit : la landing page ne fait que teaser chaque section avec un texte plus
@@ -42,21 +49,21 @@ qu'elles n'ont pas été validées.
 
 ## Placeholders à remplacer avant mise en ligne
 
-- **Logo** : `assets/logo.svg` et `assets/favicon.svg` sont une reconstitution approximative du
-  logo décrit (chapeau universitaire + avion formant un cercle). À remplacer par le fichier logo
-  réel du client (idéalement en SVG) dès qu'il est disponible.
+- **Logo** : `assets/logo.png` et `assets/favicon.png` sont le vrai logo de l'agence (fourni le
+  2026-09-17), recadré serré sur l'emblème. Plus un placeholder — rien à faire ici, sauf si
+  l'agence fournit un jour une version vectorielle (SVG) à la place du PNG actuel.
 - **Taux de réussite visa** : affiché en placeholder à **96 %**, attribut `data-target` sur
   `.stat-number` (répété sur `index.html` en teaser et `a-propos.html#pourquoi` en détail : bien
   mettre à jour les deux une fois le vrai chiffre confirmé avec l'agence).
-- **Témoignages** : les 3 témoignages de `a-propos.html` (dont un reprix en teaser sur `index.html`)
+- **Témoignages** : les 3 témoignages de `a-propos.html` (dont un repris en teaser sur `index.html`)
   sont rédigés à titre d'exemple (clairement signalés à l'écran par une note). À remplacer par des
   avis clients réels, avec l'accord des personnes citées.
-- **Photos** : le site utilise 8 photos libres de droits (licence Unsplash, usage commercial
-  autorisé, aucune attribution obligatoire : voir `assets/photos/CREDITS.txt` pour le détail) :
-  une photo d'ambiance dans le Hero, une photo dans « Qui sommes-nous », et une photo par
-  destination. À remplacer par des photos propres à l'agence (locaux, équipe, événements) dès
-  qu'elles sont disponibles, en gardant les mêmes noms de fichiers dans `assets/photos/` pour
-  ne rien casser.
+- **Photos** : le site combine des photos libres de droits (Unsplash) pour 5 des 6 destinations, et
+  des photos neutres générées par IA (sans personne réelle identifiable) fournies par l'agence pour
+  les autres usages (about-campus.jpg, dest-france.jpg, success-graduate-eiffel.jpg, etc.) — voir
+  `assets/photos/CREDITS.txt` pour le détail complet. À remplacer par de vraies photos de l'agence
+  (locaux, équipe, événements, vrais clients) dès qu'elles sont disponibles, en gardant les mêmes
+  noms de fichiers dans `assets/photos/` pour ne rien casser.
 - **Avatars témoignages** : les initiales colorées (au lieu de vraies photos) sont un choix
   délibéré tant que les témoignages restent fictifs : associer la photo d'un vrai inconnu à un
   faux nom/avis aurait donné l'impression trompeuse qu'une personne réelle identifiable

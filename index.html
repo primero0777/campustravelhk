@@ -13,7 +13,7 @@
 <meta property="og:description" content="Orientation, dossiers, visa, logement, billetterie : votre projet d'études ou de séjour à l'étranger, accompagné de bout en bout depuis Lomé.">
 <meta property="og:locale" content="fr_FR">
 
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +49,7 @@
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a href="index.html" class="brand">
-      <img src="assets/logo.svg" alt="" class="brand-mark" width="40" height="40">
+      <img src="assets/logo.png" alt="" class="brand-mark" width="40" height="40">
       <span class="brand-word">
         <span class="brand-script">Campus Travel</span>
         <span class="brand-hk">H&amp;K</span>
@@ -129,7 +129,7 @@
       <h2 data-reveal>Une agence togolaise, tournée vers le monde.</h2>
 
       <div class="about-photo" data-reveal>
-        <img src="assets/photos/about-team.jpg" alt="Groupe d'étudiants préparant leur projet de mobilité internationale" loading="lazy" width="1200" height="500">
+        <img src="assets/photos/about-campus.jpg" alt="Étudiante souriante traversant le campus, sac à dos sur l'épaule" loading="lazy" width="1200" height="654">
       </div>
 
       <div class="about-grid">
@@ -211,6 +211,33 @@
     </div>
   </section>
 
+  <!-- ===== RESEAUX SOCIAUX ===== -->
+  <section class="section">
+    <div class="wrap text-center">
+      <p class="eyebrow" data-reveal>Suivez-nous</p>
+      <h2 data-reveal>Nos actualités sur les réseaux sociaux.</h2>
+
+      <div class="social-gallery" data-reveal>
+        <button type="button" class="social-post" data-lightbox-index="0" aria-label="Agrandir la publication : obtenez votre avis de pré-admission en moins de 48h">
+          <img src="assets/photos/social-visa-avi.jpg" alt="Publication Campus Travel H&amp;K : obtenez votre avis de pré-admission en moins de 48h" loading="lazy" width="600" height="600">
+        </button>
+        <button type="button" class="social-post" data-lightbox-index="1" aria-label="Agrandir la publication : étudier en Europe commence par les bonnes démarches">
+          <img src="assets/photos/social-etudier-europe.jpg" alt="Publication Campus Travel H&amp;K : étudier en Europe commence par les bonnes démarches" loading="lazy" width="600" height="600">
+        </button>
+        <button type="button" class="social-post" data-lightbox-index="2" aria-label="Agrandir la publication : procédure Campus France, un accompagnement de A à Z">
+          <img src="assets/photos/social-campus-france.jpg" alt="Publication Campus Travel H&amp;K : procédure Campus France, un accompagnement de A à Z" loading="lazy" width="600" height="600">
+        </button>
+        <button type="button" class="social-post" data-lightbox-index="3" aria-label="Agrandir la publication : besoin d'un logement étudiant à l'étranger">
+          <img src="assets/photos/social-logement.jpg" alt="Publication Campus Travel H&amp;K : besoin d'un logement étudiant à l'étranger" loading="lazy" width="600" height="600">
+        </button>
+        <button type="button" class="social-post" data-lightbox-index="4" aria-label="Agrandir la publication : nouvelle semaine, nouveaux objectifs">
+          <img src="assets/photos/social-motivation-lundi.jpg" alt="Publication Campus Travel H&amp;K : nouvelle semaine, nouveaux objectifs" loading="lazy" width="600" height="600">
+        </button>
+      </div>
+      <p class="social-gallery-note">Suivez-nous sur Facebook et Instagram pour ne rien manquer de nos actualités.</p>
+    </div>
+  </section>
+
 </main>
 
 <!-- ===== FOOTER ===== -->
@@ -218,7 +245,7 @@
   <div class="wrap footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="brand brand-footer">
-        <img src="assets/logo.svg" alt="" class="brand-mark brand-mark-footer" width="36" height="36">
+        <img src="assets/logo.png" alt="" class="brand-mark brand-mark-footer" width="36" height="36">
         <span class="brand-word">
           <span class="brand-script">Campus Travel</span>
           <span class="brand-hk">H&amp;K</span>
@@ -233,7 +260,7 @@
     </div>
 
     <div class="footer-links">
-      <h4>Navigation</h4>
+      <h3>Navigation</h3>
       <ul>
         <li><a href="a-propos.html">Qui sommes-nous</a></li>
         <li><a href="services.html">Services</a></li>
@@ -245,7 +272,7 @@
     </div>
 
     <div class="footer-contact">
-      <h4>Coordonnées</h4>
+      <h3>Coordonnées</h3>
       <p>Agoé Minamadou 1, face station Total<br>Lomé, Togo</p>
       <p><a href="tel:+22871942001">(+228) 71 94 20 01</a></p>
       <p><a href="mailto:contact@campustravelhk.com">contact@campustravelhk.com</a></p>
@@ -266,6 +293,20 @@
 <a class="whatsapp-float" href="https://wa.me/22899364875?text=Bonjour%20Campus%20Travel%20H%26K%2C%20je%20souhaite%20des%20informations%20sur%20mon%20projet%20de%20mobilit%C3%A9%20internationale." target="_blank" rel="noopener" aria-label="Contacter Campus Travel H&K sur WhatsApp">
   <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
 </a>
+
+<!-- ===== LIGHTBOX GALERIE ===== -->
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Fermer">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Publication précédente">
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+  </button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Publication suivante">
+    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+  </button>
+</div>
 
 <script src="js/script.js" defer></script>
 </body>
