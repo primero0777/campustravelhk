@@ -16,11 +16,14 @@ contact.html          # formulaire, coordonnées, carte
 mentions-legales.html  # éditeur, hébergement, propriété intellectuelle
 cgv.html                # conditions générales de vente
 confidentialite.html    # politique de confidentialité (données collectées, droits)
+404.html                 # page d'erreur personnalisée (reconnue automatiquement par GitHub Pages)
+robots.txt                # autorise l'indexation, référence le sitemap
+sitemap.xml                # les 7 pages indexables (hors pages légales et 404, en noindex)
 css/style.css          # styles (thème navy/rouge, typographies Fraunces / Manrope / Space Mono / Caveat)
 js/script.js            # menu mobile, reveal au scroll, accordéon FAQ, compteur animé, formulaire
-assets/logo.svg          # emblème provisoire (chapeau + avion) recréé d'après la description du logo
-assets/favicon.svg     # favicon dérivé du même emblème
-assets/photos/           # photos libres de droits (Unsplash) utilisées sur le site : voir CREDITS.txt
+assets/logo.png          # vrai logo de l'agence · assets/logo-white.png : version blanche (fond sombre)
+assets/favicon.png     # favicon dérivé du même emblème
+assets/photos/           # photos utilisées sur le site : voir CREDITS.txt pour le détail et les sources
 ```
 
 Icônes : [Font Awesome Free](https://fontawesome.com) 6.5.1 via CDN (cdnjs). Seule dépendance externe
@@ -83,6 +86,29 @@ qu'elles n'ont pas été validées.
 - **Carte Google Maps** : l'embed pointe sur une recherche générale « Agoé Minamadou, Lomé,
   Togo ». À affiner avec les coordonnées GPS exactes du local si disponibles, pour un pointeur
   plus précis.
+
+## SEO et domaine personnalisé
+
+Le domaine `campustravelhk.com` est acquis mais pas encore branché. `sitemap.xml`, `robots.txt`
+et le fichier `CNAME` sont déjà préparés pour ce domaine (plus besoin d'y retoucher une fois le
+DNS configuré). Si une page est ajoutée ou retirée plus tard, penser à mettre à jour `sitemap.xml`
+en conséquence.
+
+Pour activer le domaine, deux étapes restent à faire **côté registrar / hébergeur du domaine**
+(hors de portée de ce dépôt) :
+
+1. **Chez le registrar de `campustravelhk.com`** : ajouter les enregistrements DNS pointant vers
+   GitHub Pages :
+   - 4 enregistrements `A` sur le domaine racine (`@`) vers `185.199.108.153`, `185.199.109.153`,
+     `185.199.110.153`, `185.199.111.153`
+   - un enregistrement `CNAME` sur `www` vers `primero0777.github.io` (optionnel, si `www.campustravelhk.com` doit aussi fonctionner)
+2. **Dans les réglages GitHub Pages du dépôt** (Settings → Pages) : renseigner `campustravelhk.com`
+   comme domaine personnalisé (le fichier `CNAME` du dépôt le fait déjà à moitié, GitHub demande
+   souvent de confirmer côté interface) puis cocher « Enforce HTTPS » une fois le certificat
+   généré automatiquement (peut prendre de quelques minutes à quelques heures après la
+   propagation DNS).
+
+En attendant, le site reste accessible sur `https://primero0777.github.io/campustravelhk/`.
 
 ## Aperçu local
 

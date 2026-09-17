@@ -55,4 +55,10 @@ mise à jour avec le bon email et le vrai logo, remplace l'ancienne version du 2
 social-campus-france.jpg  : recadrage carré, utilisé dans la galerie réseaux sociaux d'index.html
 promo-campus-france.jpg   : version large, utilisée en bannière sur destinations.html
 
+Visuel du hero (page d'accueil), fourni par l'agence le 2026-09-17 (fichier "for hero.png",
+renommé pour respecter la convention de nommage du projet) :
+hero-graduate-blob.png : Jeune diplômée souriante, déjà détourée par l'agence dans une forme
+organique avec contour blanc et rouge (PNG avec transparence), affichée telle quelle dans le
+hero d'index.html sans recadrage CSS additionnel.
+
 À remplacer si le client fournit ses propres photos (locaux, équipe, événements) : voir README.md.
