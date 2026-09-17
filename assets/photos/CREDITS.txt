@@ -10,9 +10,12 @@ dest-belgique.jpg   : Tour de l'Hôtel de Ville / Bruxelles : photographe : Tobi
 dest-suisse.jpg     : Lac Léman et jet d'eau / Genève : photographe : Ryan Klaus : unsplash.com
 
 Logo (assets/logo.png, assets/favicon.png) : le vrai logo de l'agence, fourni le 2026-09-17
-("LOGO CAMPUS TRAVEL H&K.png" et "-V2 favicon.png"), recadré serré sur l'emblème (chapeau + globe +
-avion) pour l'usage en petit format dans l'en-tête/pied de page. Remplace l'ancienne reconstitution
-approximative (assets/logo.svg, assets/favicon.svg, supprimés).
+("LOGO CAMPUS TRAVEL H&K.png" et "-V2 favicon.png"). assets/logo.png est le lockup complet recadré
+serré (emblème + texte "Campus Travel H&K" tel que dessiné dans le fichier original, affiché en une
+seule image dans l'en-tête/pied de page — passé en blanc via un filtre CSS sur fond sombre/transparent).
+assets/favicon.png est un recadrage de l'emblème seul (chapeau + globe + avion), sur fond blanc arrondi
+pour rester lisible en petit format d'onglet. Remplace l'ancienne reconstitution approximative
+(assets/logo.svg, assets/favicon.svg, supprimés).
 
 Photos neutres générées par IA, fournies par l'agence le 2026-09-17 (fichiers "Image_fx(...).jpg",
 sans texte ni logo incrusté) :
