@@ -69,8 +69,9 @@ qu'elles n'ont pas été validées.
   faux nom/avis aurait donné l'impression trompeuse qu'une personne réelle identifiable
   cautionne l'agence. À remplacer par de vraies photos une fois de vrais témoignages clients
   obtenus (avec leur accord).
-- **Réseaux sociaux** : les icônes Facebook / Instagram / LinkedIn du footer pointent vers `#`
-  en attendant les liens réels.
+- **Réseaux sociaux** : les icônes Facebook / Instagram / TikTok / LinkedIn / YouTube du footer pointent vers
+  les vrais profils de l'agence (mis à jour le 2026-09-17). Rien à faire ici, sauf si l'agence
+  change de handle sur l'une de ces plateformes.
 - **Tarifs** : `tarifs.html` affiche 3 formules avec des montants **fictifs** (250 € / 450 € / 750 €)
   demandés à titre d'exemple provisoire, clairement signalés par un astérisque et une note en bas
   de page. À remplacer par la vraie grille tarifaire de l'agence (et à voir si le client souhaite
