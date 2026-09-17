@@ -112,15 +112,13 @@
      <img> filtré au premier chargement, ce qui le rendait invisible. */
   const header = document.getElementById("siteHeader");
   const headerLogo = header ? header.querySelector(".brand-mark") : null;
-  const mobileHeaderQuery = window.matchMedia("(max-width: 1024px)");
 
   if (header) {
     const onScroll = () => {
       const scrolled = window.scrollY > 24;
       header.classList.toggle("scrolled", scrolled);
       if (headerLogo) {
-        const wantWhite = !scrolled && mobileHeaderQuery.matches;
-        const wantSrc = wantWhite ? "assets/logo-white.png" : "assets/logo.png";
+        const wantSrc = scrolled ? "assets/logo.png" : "assets/logo-white.png";
         if (!headerLogo.src.endsWith(wantSrc)) headerLogo.src = wantSrc;
       }
     };
