@@ -49,9 +49,9 @@ qu'elles n'ont pas été validées.
 
 ## Placeholders à remplacer avant mise en ligne
 
-- **Logo** : `assets/logo.png` et `assets/favicon.png` sont le vrai logo de l'agence (fourni le
-  2026-09-17), recadré serré sur l'emblème. Plus un placeholder — rien à faire ici, sauf si
-  l'agence fournit un jour une version vectorielle (SVG) à la place du PNG actuel.
+- **Logo** : `assets/logo.png`, `assets/logo-white.png` et `assets/favicon.png` sont le vrai logo
+  de l'agence (fourni le 2026-09-17), recadré serré sur l'emblème. Plus un placeholder, rien à
+  faire ici, sauf si l'agence fournit un jour une version vectorielle (SVG) à la place du PNG actuel.
 - **Taux de réussite visa** : affiché en placeholder à **96 %**, attribut `data-target` sur
   `.stat-number` (répété sur `index.html` en teaser et `a-propos.html#pourquoi` en détail : bien
   mettre à jour les deux une fois le vrai chiffre confirmé avec l'agence).
@@ -60,7 +60,7 @@ qu'elles n'ont pas été validées.
   avis clients réels, avec l'accord des personnes citées.
 - **Photos** : le site combine des photos libres de droits (Unsplash) pour 5 des 6 destinations, et
   des photos neutres générées par IA (sans personne réelle identifiable) fournies par l'agence pour
-  les autres usages (about-campus.jpg, dest-france.jpg, success-graduate-eiffel.jpg, etc.) — voir
+  les autres usages (about-campus.jpg, dest-france.jpg, success-graduate-eiffel.jpg, etc.), voir
   `assets/photos/CREDITS.txt` pour le détail complet. À remplacer par de vraies photos de l'agence
   (locaux, équipe, événements, vrais clients) dès qu'elles sont disponibles, en gardant les mêmes
   noms de fichiers dans `assets/photos/` pour ne rien casser.

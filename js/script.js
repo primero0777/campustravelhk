@@ -106,13 +106,26 @@
     });
   });
 
-  /* ---------- Header : transparent en haut, plein au scroll ---------- */
+  /* ---------- Header : transparent en haut, plein au scroll ----------
+     Le logo blanc est une vraie image (assets/logo-white.png), pas un
+     filtre CSS : certains navigateurs mobiles peinent à repeindre un
+     <img> filtré au premier chargement, ce qui le rendait invisible. */
   const header = document.getElementById("siteHeader");
+  const headerLogo = header ? header.querySelector(".brand-mark") : null;
+  const mobileHeaderQuery = window.matchMedia("(max-width: 1024px)");
+
   if (header) {
     const onScroll = () => {
-      header.classList.toggle("scrolled", window.scrollY > 24);
+      const scrolled = window.scrollY > 24;
+      header.classList.toggle("scrolled", scrolled);
+      if (headerLogo) {
+        const wantWhite = !scrolled && mobileHeaderQuery.matches;
+        const wantSrc = wantWhite ? "assets/logo-white.png" : "assets/logo.png";
+        if (!headerLogo.src.endsWith(wantSrc)) headerLogo.src = wantSrc;
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
     onScroll();
   }
 

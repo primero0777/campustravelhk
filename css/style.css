@@ -109,17 +109,17 @@ button{ font-family: inherit; }
   min-height: 76px; flex-wrap: nowrap;
 }
 .brand{ display: flex; align-items: center; gap: 10px; }
-.brand-mark{ flex-shrink: 0; transition: filter .3s ease; }
+.brand-mark{ flex-shrink: 0; }
 
 /* On mobile/tablet the header floats transparently over the hero (no white bar,
    fixed instead of sticky so the hero's gradient runs all the way to the top
    edge underneath it) and only becomes a solid frosted bar once scrolled, so
-   the logo stays legible once lighter sections pass underneath it. */
+   the logo stays legible once lighter sections pass underneath it. The white
+   logo swap itself is handled in JS (a real image, not a CSS filter). */
 @media (max-width: 1024px){
   .site-header{ position: fixed; left: 0; right: 0; }
   .site-header:not(.scrolled){ border-bottom-color: transparent; }
   .site-header:not(.scrolled)::before{ opacity: 0; }
-  .site-header:not(.scrolled) .brand-mark{ filter: brightness(0) invert(1); }
 }
 
 .main-nav ul{ display: flex; gap: 22px; flex-wrap: nowrap; }
@@ -631,7 +631,6 @@ textarea{ resize: vertical; }
 .site-footer{ background: var(--navy-deep); color: rgba(255,255,255,.75); padding: 70px 0 0; }
 .footer-inner{ display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,.12); }
 .footer-brand p{ font-size: .9rem; color: rgba(255,255,255,.6); margin: 16px 0 20px; max-width: 320px; }
-.brand-mark-footer{ filter: brightness(0) invert(1); }
 .social-row{ display: flex; gap: 10px; }
 .social-icon{
   width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25);
