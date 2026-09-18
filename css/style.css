@@ -200,11 +200,19 @@ button{ font-family: inherit; }
 .hero-layout{ position: relative; z-index: 2; }
 .hero-inner{ padding: 84px 24px 120px; text-align: left; max-width: 760px; }
 
-.hero-visual{ display: none; }
+.hero-visual{ display: block; position: relative; width: 230px; height: 260px; margin: 8px auto 0; }
+
+@media (max-width: 1024px){
+  /* The 120px bottom padding above is sized for desktop, where the visual sits
+     beside .hero-inner rather than below it. Trim it here since the image now
+     stacks directly under the CTA buttons and its own margin handles spacing. */
+  .hero-inner{ padding-bottom: 8px; }
+  .hero-visual{ left: 44px; top: -14px; }
+}
 
 @media (min-width: 1025px){
   .hero-layout{ display: grid; grid-template-columns: 1fr 380px; align-items: center; gap: 20px; }
-  .hero-visual{ display: block; position: relative; width: 340px; height: 390px; justify-self: center; }
+  .hero-visual{ width: 340px; height: 390px; margin: 0; justify-self: center; }
 }
 
 .hero-blob{
@@ -792,7 +800,7 @@ textarea{ resize: vertical; }
 }
 
 @media (max-width: 760px){
-  .hero-inner{ padding: 60px 24px 90px; }
+  .hero-inner{ padding: 60px 24px 8px; }
   .section{ padding: 76px 0; }
   .cards-grid{ grid-template-columns: 1fr; }
   .form-row-2{ grid-template-columns: 1fr; }
