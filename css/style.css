@@ -191,11 +191,19 @@ button{ font-family: inherit; }
 .hero-bg{ position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 .route-lines{ position: absolute; inset: 0; width: 100%; height: 100%; }
 .route-lines path{ fill: none; stroke: rgba(255,255,255,.16); stroke-width: 2; stroke-dasharray: 2 10; stroke-linecap: round; }
-.plane-icon{ position: absolute; font-size: 1.4rem; color: rgba(255,255,255,.5); }
-.plane-1{ top: 30%; left: 8%; animation: drift1 16s linear infinite; }
-.plane-2{ top: 58%; left: -4%; animation: drift2 22s linear infinite; animation-delay: 3s; }
-@keyframes drift1{ from{ transform: translateX(0) translateY(0) rotate(8deg); } to{ transform: translateX(115vw) translateY(-40px) rotate(8deg); } }
-@keyframes drift2{ from{ transform: translateX(0) translateY(0) rotate(4deg); } to{ transform: translateX(120vw) translateY(30px) rotate(4deg); } }
+/* Start position, trajectory and timing are randomized per-icon by JS via these
+   custom properties (see js/script.js) so the two planes never fly the same
+   path twice; the values below are just a sane fallback before JS runs. */
+.plane-icon{
+  position: absolute; font-size: 1.4rem; color: rgba(255,255,255,.5);
+  top: var(--plane-top, 30%); left: var(--plane-left, 8%);
+  animation: plane-drift var(--plane-dur, 18s) linear infinite;
+  animation-delay: var(--plane-delay, 0s);
+}
+@keyframes plane-drift{
+  from{ transform: translate(0, 0) rotate(var(--plane-rot, 8deg)); }
+  to{ transform: translate(var(--plane-dx, 115vw), var(--plane-dy, -40px)) rotate(var(--plane-rot, 8deg)); }
+}
 
 .hero-layout{ position: relative; z-index: 2; }
 .hero-inner{ padding: 84px 24px 120px; text-align: left; max-width: 760px; }
@@ -802,6 +810,10 @@ textarea{ resize: vertical; }
 @media (max-width: 760px){
   .hero-inner{ padding: 60px 24px 8px; }
   .section{ padding: 76px 0; }
+  /* .section-tight has the same specificity as .section above and comes
+     first in the file, so without this it gets silently overridden back to
+     a full 76px on both sides at this breakpoint. */
+  .section-tight{ padding: 36px 0 0; }
   .cards-grid{ grid-template-columns: 1fr; }
   .form-row-2{ grid-template-columns: 1fr; }
   .footer-inner{ grid-template-columns: 1fr; gap: 36px; }

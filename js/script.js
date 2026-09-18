@@ -5,6 +5,55 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Avions décoratifs : position et trajectoire aléatoires ----------
+     Chaque icône reçoit un nouveau point de départ et une nouvelle trajectoire
+     à chaque boucle (pas seulement au chargement de la page), en évitant de
+     répéter une trajectoire déjà utilisée lors des 4 boucles précédentes : au
+     moins 5 trajectoires différentes de suite avant qu'une puisse revenir
+     (voir @keyframes plane-drift dans style.css). */
+  document.querySelectorAll(".plane-icon").forEach((plane) => {
+    const history = [];
+
+    const rollValues = () => {
+      const goingUp = Math.random() > 0.5;
+      const top = Math.round(10 + Math.random() * 65);
+      const left = Math.round(-15 + Math.random() * 30);
+      const dx = Math.round(110 + Math.random() * 25);
+      const dy = Math.round(20 + Math.random() * 50);
+      const rot = 2 + Math.random() * 10;
+      const dur = 14 + Math.random() * 14;
+      // Coarse signature so "different trajectory" means visually distinct,
+      // not just a different decimal of the same flight path.
+      const signature = [
+        Math.round(top / 10), Math.round(left / 10), Math.round(dx / 10),
+        Math.round(dy / 15), goingUp, Math.round(dur / 5),
+      ].join("_");
+      return { goingUp, top, left, dx, dy, rot, dur, signature };
+    };
+
+    const randomize = (isFirstRun) => {
+      let values;
+      for (let attempt = 0; attempt < 20; attempt++) {
+        values = rollValues();
+        if (!history.includes(values.signature)) break;
+      }
+      history.push(values.signature);
+      if (history.length > 4) history.shift();
+
+      const { goingUp, top, left, dx, dy, rot, dur } = values;
+      plane.style.setProperty("--plane-top", `${top}%`);
+      plane.style.setProperty("--plane-left", `${left}%`);
+      plane.style.setProperty("--plane-dx", `${dx}vw`);
+      plane.style.setProperty("--plane-dy", `${goingUp ? "-" : ""}${dy}px`);
+      plane.style.setProperty("--plane-rot", `${goingUp ? "-" : ""}${rot.toFixed(1)}deg`);
+      plane.style.setProperty("--plane-dur", `${dur.toFixed(1)}s`);
+      if (isFirstRun) plane.style.setProperty("--plane-delay", `${(-1 * Math.random() * 20).toFixed(1)}s`);
+    };
+
+    randomize(true);
+    plane.addEventListener("animationiteration", () => randomize(false));
+  });
+
   /* ---------- Menu mobile (dropdown) ---------- */
   const navToggle = document.getElementById("navToggle");
   const mainNav = document.getElementById("mainNav");
