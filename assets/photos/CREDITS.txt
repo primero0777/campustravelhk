@@ -68,8 +68,9 @@ converti en WebP le 2026-09-19 (1,47 Mo → 123 Ko) : le fichier n'est jamais af
 340px de large sur le site, le PNG d'origine était largement surdimensionné.
 
 Image de partage sur les réseaux sociaux (assets/og-image.jpg, hors de ce dossier photos) : générée
-le 2026-09-19, logo blanc de l'agence centré sur fond navy (#0E2054) au format standard 1200x630,
-utilisée comme og:image sur les 11 pages. Remplace l'aperçu par défaut (about-campus.jpg) que
-WhatsApp/Facebook/LinkedIn affichaient au partage d'un lien du site.
+le 2026-09-19, logo couleur de l'agence centré sur fond blanc au format standard 1200x630, utilisée
+comme og:image sur les 11 pages. Remplace l'aperçu par défaut (about-campus.jpg) que
+WhatsApp/Facebook/LinkedIn affichaient au partage d'un lien du site. Une première version sur fond
+navy avait été essayée puis remplacée par le client, qui préférait le logo couleur tel quel.
 
 À remplacer si le client fournit ses propres photos (locaux, équipe, événements) : voir README.md.
