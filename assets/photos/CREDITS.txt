@@ -67,4 +67,9 @@ hero d'index.html sans recadrage CSS additionnel. Redimensionné de 1254x1254 à
 converti en WebP le 2026-09-19 (1,47 Mo → 123 Ko) : le fichier n'est jamais affiché à plus de
 340px de large sur le site, le PNG d'origine était largement surdimensionné.
 
+Image de partage sur les réseaux sociaux (assets/og-image.jpg, hors de ce dossier photos) : générée
+le 2026-09-19, logo blanc de l'agence centré sur fond navy (#0E2054) au format standard 1200x630,
+utilisée comme og:image sur les 11 pages. Remplace l'aperçu par défaut (about-campus.jpg) que
+WhatsApp/Facebook/LinkedIn affichaient au partage d'un lien du site.
+
 À remplacer si le client fournit ses propres photos (locaux, équipe, événements) : voir README.md.
