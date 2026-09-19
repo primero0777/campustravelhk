@@ -58,9 +58,8 @@ qu'elles n'ont pas été validées.
 - **Taux de réussite visa** : affiché en placeholder à **96 %**, attribut `data-target` sur
   `.stat-number` (répété sur `index.html` en teaser et `a-propos.html#pourquoi` en détail : bien
   mettre à jour les deux une fois le vrai chiffre confirmé avec l'agence).
-- **Témoignages** : les 3 témoignages de `a-propos.html` (dont un repris en teaser sur `index.html`)
-  sont rédigés à titre d'exemple (clairement signalés à l'écran par une note). À remplacer par des
-  avis clients réels, avec l'accord des personnes citées.
+- **Témoignages** : les 6 témoignages de `a-propos.html` (un par destination) sont rédigés à titre
+  d'exemple. À remplacer par des avis clients réels, avec l'accord des personnes citées.
 - **Photos** : le site combine des photos libres de droits (Unsplash) pour 5 des 6 destinations, et
   des photos neutres générées par IA (sans personne réelle identifiable) fournies par l'agence pour
   les autres usages (about-campus.jpg, dest-france.jpg, success-graduate-eiffel.jpg, etc.), voir
@@ -75,17 +74,17 @@ qu'elles n'ont pas été validées.
 - **Réseaux sociaux** : les icônes Facebook / Instagram / TikTok / LinkedIn / YouTube du footer pointent vers
   les vrais profils de l'agence (mis à jour le 2026-09-17). Rien à faire ici, sauf si l'agence
   change de handle sur l'une de ces plateformes.
-- **Tarifs** : `tarifs.html` affiche 3 formules avec des montants **fictifs** (250 € / 450 € / 750 €)
-  demandés à titre d'exemple provisoire, clairement signalés par un astérisque et une note en bas
-  de page. À remplacer par la vraie grille tarifaire de l'agence (et à voir si le client souhaite
-  afficher des prix fixes en FCFA, une fourchette, ou rester en « sur devis » uniquement).
+- **Tarifs** : `tarifs.html` affiche 3 formules sans montant chiffré (« Sur devis » sur chaque
+  carte), à la demande du client qui ne souhaite pas communiquer de prix publiquement. Si ça
+  change, il suffit de remplacer le texte « Sur devis » de `.price-amount` par un montant dans
+  chacune des 3 cartes.
 - **Formulaire de contact** : fonctionne actuellement via un lien `mailto:` pré-rempli (solution
   sans backend, adaptée à un hébergement mutualisé basique). Pour un envoi plus fiable sans
   dépendre du client mail du visiteur, prévoir une intégration Formspree ou EmailJS (quelques
   lignes à modifier dans `js/script.js`, section « Formulaire de contact »).
-- **Carte Google Maps** : l'embed pointe sur une recherche générale « Agoé Minamadou, Lomé,
-  Togo ». À affiner avec les coordonnées GPS exactes du local si disponibles, pour un pointeur
-  plus précis.
+- **Carte Google Maps** : l'embed pointe sur les coordonnées GPS exactes du local (fournies par
+  l'agence via un lien Google Maps), pas une recherche approximative par quartier. Rien à faire ici
+  sauf déménagement.
 
 ## SEO et domaine personnalisé
 

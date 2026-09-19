@@ -449,8 +449,6 @@ button{ font-family: inherit; }
 .stat-tile-main .stat-number{ font-size: clamp(2.6rem, 6vw, 4rem); }
 .stat-tile:not(.stat-tile-main) .stat-number{ font-size: clamp(2rem, 4vw, 2.8rem); }
 .stat-label{ color: rgba(255,255,255,.75); font-size: .92rem; margin: 0; }
-.stat-flag{ color: var(--red); cursor: help; }
-.stat-footnote{ font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 40px; }
 
 @media (max-width: 640px){
   .stats-row{ grid-template-columns: 1fr; }
@@ -460,13 +458,6 @@ button{ font-family: inherit; }
 .reason-num{ font-family: var(--font-mono); color: var(--red); font-size: .85rem; }
 .reason h3{ color: var(--white); font-size: 1.1rem; margin: .4em 0; }
 .reason p{ color: rgba(255,255,255,.65); font-size: .92rem; }
-
-/* ---------- Témoignages ---------- */
-.placeholder-note{
-  display: inline-block; font-family: var(--font-mono); font-size: .74rem; color: var(--red);
-  background: rgba(223,39,30,.08); border: 1px dashed rgba(223,39,30,.4); padding: 6px 12px; border-radius: 8px;
-  margin-bottom: 8px;
-}
 
 /* ---------- Pages légales ---------- */
 .legal-disclaimer{
@@ -480,7 +471,6 @@ button{ font-family: inherit; }
 .legal-content ul{ margin: 0 0 1em; padding-left: 1.3em; color: var(--muted); }
 .legal-content ul li{ list-style: disc; margin-bottom: .4em; }
 .legal-content strong{ color: var(--ink); }
-.legal-updated{ font-family: var(--font-mono); font-size: .78rem; color: var(--muted); margin-bottom: 30px; }
 .testimonial{
   position: relative; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 36px 30px 30px; box-shadow: var(--shadow-card); margin: 0;
@@ -656,7 +646,6 @@ textarea{ resize: vertical; }
   display: grid; grid-template-columns: 1fr 240px; gap: 40px; align-items: center;
   background: var(--mist); border-radius: var(--radius); padding: 40px; margin-top: 60px;
 }
-.highlight-block-lead{ margin-top: 0; margin-bottom: 60px; }
 .highlight-block-text .eyebrow{ margin-bottom: 10px; }
 .highlight-block-text h2{ font-size: 1.5rem; margin-bottom: .4em; }
 .highlight-block-text p{ color: var(--muted); }
@@ -816,7 +805,6 @@ textarea{ resize: vertical; }
   .cards-grid{ grid-template-columns: 1fr; }
   .form-row-2{ grid-template-columns: 1fr; }
   .footer-inner{ grid-template-columns: 1fr; gap: 36px; }
-  .stat-block{ flex-direction: column; gap: 8px; }
   .about-photo{ aspect-ratio: 4 / 3; }
 }
 
