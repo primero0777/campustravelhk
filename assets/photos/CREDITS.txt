@@ -61,8 +61,10 @@ promo-campus-france.jpg   : version large, utilisée en bannière sur destinatio
 
 Visuel du hero (page d'accueil), fourni par l'agence le 2026-09-17 (fichier "for hero.png",
 renommé pour respecter la convention de nommage du projet) :
-hero-graduate-blob.png : Jeune diplômée souriante, déjà détourée par l'agence dans une forme
-organique avec contour blanc et rouge (PNG avec transparence), affichée telle quelle dans le
-hero d'index.html sans recadrage CSS additionnel.
+hero-graduate-blob.webp : Jeune diplômée souriante, déjà détourée par l'agence dans une forme
+organique avec contour blanc et rouge (transparence conservée), affichée telle quelle dans le
+hero d'index.html sans recadrage CSS additionnel. Redimensionné de 1254x1254 à 700x700 et
+converti en WebP le 2026-09-19 (1,47 Mo → 123 Ko) : le fichier n'est jamais affiché à plus de
+340px de large sur le site, le PNG d'origine était largement surdimensionné.
 
 À remplacer si le client fournit ses propres photos (locaux, équipe, événements) : voir README.md.

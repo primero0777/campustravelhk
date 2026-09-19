@@ -690,7 +690,6 @@ textarea{ resize: vertical; }
 .price-card h2{ font-size: 1.25rem; margin-bottom: .3em; }
 .price-tagline{ color: var(--muted); font-size: .9rem; margin-bottom: 20px; }
 .price-amount{ font-family: var(--font-mono); font-weight: 700; color: var(--navy-deep); font-size: 1.1rem; margin-bottom: 22px; }
-.price-amount .price-flag{ color: var(--red); font-size: .8rem; vertical-align: super; cursor: help; }
 .price-features{ display: flex; flex-direction: column; gap: 11px; margin-bottom: 28px; flex-grow: 1; }
 .price-features li{ display: flex; align-items: flex-start; gap: 10px; font-size: .92rem; color: var(--ink); }
 .price-features li i{ color: var(--red); margin-top: 3px; flex-shrink: 0; }
