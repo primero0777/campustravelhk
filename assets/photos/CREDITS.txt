@@ -40,12 +40,16 @@ brochure.jpg : Bannière "Concrétiser votre rêve d'étude à l'étranger" avec
 
 Visuels de réseaux sociaux fournis par l'agence (fichiers "Campus Travel MARS/AVRIL/Post...",
 fournis le 2026-09-16, redimensionnés en 600x600 pour le web) :
-social-visa-avi.jpg        : "Obtiens ton AVI en moins de 48h" : réalisez votre projet d'études à l'étranger
 social-logement.jpg        : "Besoin d'un logement étudiant à l'étranger ?"
 social-etudier-europe.jpg  : "Étudier en Europe commence par les bonnes démarches"
 social-motivation-lundi.jpg: "Hello Lundi : nouvelle semaine, nouveaux objectifs" (post d'engagement, sans lien direct avec une destination ou un service)
 
-Ces 4 visuels affichent encore l'ancienne adresse campustravel31@gmail.com en incrustation (texte
+social-visa-avi.jpg a été retiré du site le 2026-09-19 : le post ("Obtiens ton AVI en moins de
+48h") faisait référence à l'AVI (Attestation de Virement Irrévocable), un agrément que l'agence
+ne détient pas selon le client. Le fichier reste dans ce dossier mais n'est plus référencé par
+aucune page.
+
+Ces 3 visuels affichent encore l'ancienne adresse campustravel31@gmail.com en incrustation (texte
 fixé dans l'image, non modifiable depuis le site) : à régénérer dans l'outil de conception d'origine
 (Canva ou autre) si l'agence veut les mettre à jour avec contact@campustravelhk.com avant de les
 repartager sur les réseaux sociaux.
